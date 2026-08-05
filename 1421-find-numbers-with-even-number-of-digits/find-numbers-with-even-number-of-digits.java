@@ -1,11 +1,12 @@
 class Solution {
     public int findNumbers(int[] nums) {
-        int evenCount = 0 ;
-        for(int num:nums){
-            int len = String.valueOf(num).length();
+        int evenCount =0;
 
-            if(len % 2 ==0){
-                evenCount++;
+        for(int num:nums){
+            int digitCount = (int) Math.floor(Math.log10(num)) +1;
+
+            if (digitCount % 2 == 0){
+                evenCount ++;
             }
         }
 
